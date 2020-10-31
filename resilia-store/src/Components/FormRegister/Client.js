@@ -7,6 +7,7 @@ export default function FormClient() {
 
 	return (
 		<>
+			<h1> Register now</h1>
 			<Form>
 				<Form.Row>
 					<Form.Group as={Col} controlId="formGridName">

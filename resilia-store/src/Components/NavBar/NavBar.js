@@ -45,7 +45,7 @@ export default function NavBar() {
 							</Dropdown.Menu>
 						</div>
 					</Dropdown>
-					<Nav.Link href="#features">Cest</Nav.Link>
+					<Nav.Link href = '/products'>Products </Nav.Link>
 					<Nav.Link href="#features">Supplier</Nav.Link>
 				</Nav>
 			</Navbar>

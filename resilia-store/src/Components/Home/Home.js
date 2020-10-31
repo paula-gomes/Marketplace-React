@@ -1,0 +1,1 @@
+/// This content must be in the inital page, just a few products are added//
