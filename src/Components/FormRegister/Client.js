@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 export default function FormClient() {
 
 	return (
-		<>
+		<div style={{ margin: "0 2vw"}}>
 			<h1> Register now</h1>
 			<Form>
 				<Form.Row>
@@ -49,5 +49,6 @@ export default function FormClient() {
 					Register
 				</Button>
 			</Form>
-		</>)
+		</div>
+	)
 }

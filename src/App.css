@@ -4,11 +4,11 @@
 
 .logo {
   width: 85px;
-  margin-left: 80px; 
 }
-.cardProducts{
+.product-list{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   padding:20px;
 }
 
