@@ -1,39 +1,46 @@
-import React, { useState, useEffect } from 'react';
-import { Link , Switch , Route } from 'react-router-dom';
+import React from 'react';
+import { Link , Switch , Route, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
-
+import Card from 'react-bootstrap/Card';
 
 import './Product.css';
 
 //this must be in another page
+function ViewProduct (props) {
 
-function ViewProducts ({ value }) {
-  const [data, setData] = useState({});
+  
+  const [product, setProduct] = React.useState([]);
+  const {id} = useParams();
+  console.log(id);
+  React.useEffect(() => {
+		fetch(`https://resilia-marketplace.herokuapp.com/products/${id}`)
+			.then(res => res.json())
+			.then(json => setProduct(json))
+	}, [id])
 
-  const { id } = value;
-
-    // useEffect(() => {
-    //     const fetchProduct = async () => {
-    //     const response = await axios(`https://resilia-marketplace.herokuapp.com/products/${id}`);
-    //     setData(response.data);
-    //     };
-    //     fetchProduct();
-    // }, [id]);
-
+  
     return (
         <>
-          <Link to={`/products/${id}`} >
-            <Button variant="primary" onClick={setData}>Mais</Button>
-          </Link>
-          <Switch>
-            <Route path={`/products/${id}`}  />
-          </Switch>
+          {
+            product.map(item=>(
+              <Card key ={item.id}>
+                <Card.Title>{item.name}
+                </Card.Title>
+              </Card>
+            ))
+            }
+          
         </>
     )
 }
 
-/* children={} */
 
+export default ViewProduct;
 
-export default ViewProducts;
+/*
+  <Switch>          
+          <Route path={`/products/${id}`} />
+
+          </Switch>
+*/
