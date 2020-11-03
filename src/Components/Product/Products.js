@@ -1,7 +1,6 @@
 import Card from 'react-bootstrap/Card';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ViewProduct from './ViewProduct';
 import Button from 'react-bootstrap/Button';
 
 import './Product.css';
@@ -30,6 +29,7 @@ const Products = (props) => {
 							</Card.Text>
 							<Link to={`/products/${item.id}`} >
 								<Button variant="primary" >Mais</Button>
+								
 							</Link>
 
 						</Card.Body>

@@ -1,15 +1,11 @@
 import React from 'react';
-import { Link, Switch, Route, useParams } from 'react-router-dom';
-import axios from 'axios';
+import {useParams} from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 import './Product.css';
 
-//this must be in another page
 function ViewProduct(props) {
-
-
   const [product, setProduct] = React.useState([]);
   const { id } = useParams();
   console.log(id);
@@ -30,7 +26,7 @@ function ViewProduct(props) {
               <Card.Img className="cardImg" variant="top" src={item.img} />
               <Card.Text>{item.description}</Card.Text>              
             </div>
-            <Button variant="primary" style={{ width: "100px"}}> Finalizar compra</Button> 
+            <Button variant="primary" style={{ width: "100px"}}> Finalizar compra</Button>           
           </Card>
 
         ))

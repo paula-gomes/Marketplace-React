@@ -21,7 +21,7 @@ export default function NavBar() {
 
 				<Form inline className="ml-auto" style={{ marginRight: "1vw" }} >
 					<FormControl type="text" placeholder="Search" className="mr-sm-2" />
-					<Button variant="outline-primary">Search</Button>
+					<Button variant="outline-primary">Pesquisar</Button>
 				</Form>
 
 				<Dropdown>
@@ -36,7 +36,7 @@ export default function NavBar() {
 								</div>
 							</Dropdown.Item>
 							<div>
-								<p>Not a client?</p>
+								<p>Entre</p>
 							</div>
 							<Dropdown.Item>
 								<Link to='/newUser'>
