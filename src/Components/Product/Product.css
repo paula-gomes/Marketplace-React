@@ -4,3 +4,8 @@
     width: auto;
     height: auto;
 }
+
+.productInfo{
+
+    display:flex;
+}
