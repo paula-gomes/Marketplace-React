@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Client from './Components/FormRegister/Client';
 import Products from './Components/Product/Products';
 import ViewProduct from './Components/Product/ViewProduct';
+import Home from './Components/Home/Home';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
           <Switch>
-            <Route exact path="/" />
+            <Route exact path="/" children={<Home/>}/>
             <Route exact path="/products/" children={<Products />} />
             <Route path ="/products/:id" children={<ViewProduct/>} />
             <Route path="/newUser" children={<Client />} />          
