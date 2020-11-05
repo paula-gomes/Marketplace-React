@@ -41,5 +41,4 @@ const Home = (props) => {
 		</Carousel>
 	);
 };
-
 export default Home;
