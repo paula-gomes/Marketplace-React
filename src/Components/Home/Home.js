@@ -1,6 +1,7 @@
 /// This content must be in the inital page, just a few products are added//
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import {Link} from 'react-router-dom';
 import './Home.css';
 
 const Home = (props) => {
@@ -22,12 +23,14 @@ const Home = (props) => {
 				if (index < 12)
 					return (
 						<Carousel.Item>
-							<img
-								className="d-block w-100"
-								src={item.img}
-								alt="First slide"
-								style={{height: '400px'}}
-							/>
+							<Link to={`/products/${item.id}`}>
+								<img
+									className="d-block w-100"
+									src={item.img}
+									alt="First slide"
+									style={{height: '400px'}}
+								/>
+							</Link>
 							<Carousel.Caption>
 								<h3>{item.name}</h3>
 								<p>{item.description}</p>
