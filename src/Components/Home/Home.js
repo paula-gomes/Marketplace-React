@@ -1,6 +1,7 @@
 /// This content must be in the inital page, just a few products are added//
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import Image from 'react-bootstrap/Image';
 import './Home.css';
 
 const Home = (props) => {
@@ -19,18 +20,19 @@ const Home = (props) => {
 
 	console.log(products);
 	return (
-		<Carousel>
+		<Carousel className="carousel"> 
 			
     {
       products.map((item, index) => {
         if(index <3)
         return (
-
+      
         <Carousel.Item>
           <img
-            className="carouselImg"
+            className ="d-block w-100"
             src= {item.img}
             alt="First slide"
+            style={{height: "400px"}}
           />
           <Carousel.Caption>
             <h3>First slide label</h3>

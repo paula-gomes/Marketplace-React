@@ -36,7 +36,7 @@ export default function NavBar() {
 								</div>
 							</Dropdown.Item>
 							<div>
-								<p>Entre</p>
+								<p>Not a client?</p>
 							</div>
 							<Dropdown.Item>
 								<Link to='/newUser'>

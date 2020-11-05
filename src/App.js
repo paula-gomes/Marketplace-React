@@ -17,7 +17,7 @@ function App() {
             <Route exact path="/" children={<Home/>}/>
             <Route exact path="/products/" children={<Products />} />
             <Route path ="/products/:id" children={<ViewProduct/>} />
-            <Route path="/newUser" children={<Client />} />          
+            <Route path="/newUser" children={<Client/>} />          
           </Switch>
       </BrowserRouter>
     </div>
