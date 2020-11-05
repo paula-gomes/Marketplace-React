@@ -21,7 +21,7 @@ function App() {
             <Route path="/newUser" children={<Client/>} />          
           </Switch>
       </BrowserRouter>
-      <Footer />
+     
     </div>
   );
 }
