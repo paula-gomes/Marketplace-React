@@ -6,6 +6,7 @@ import Client from './Components/FormRegister/Client';
 import Products from './Components/Product/Products';
 import ViewProduct from './Components/Product/ViewProduct';
 import Home from './Components/Home/Home';
+import Footer from './Components/Footer/Footer';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/newUser" children={<Client/>} />          
           </Switch>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }
