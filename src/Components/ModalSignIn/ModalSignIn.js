@@ -33,7 +33,7 @@ function ModalSignIn(props) {
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        Enter
+        Entre
       </Button>
 
       <Modal
@@ -49,25 +49,23 @@ function ModalSignIn(props) {
         <Modal.Body>
           <form action="https://resilia-marketplace.herokuapp.com/products" method="GET">
             <Form.Group controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label>Email </Form.Label>
               <Form.Control 
               type="email" 
               placeholder="Enter email"
               onChange={(event) => setEmail(event.target.value)}
               />
-              <Form.Text className="text-muted">
-                We'll never share your email with anyone else.
-              </Form.Text>
+             
             </Form.Group>
 
             <Form.Group controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
+              <Form.Label>Senha</Form.Label>
               <Form.Control type="password" placeholder="Password" />
             </Form.Group>
             <Form.Group controlId="formBasicCheckbox">              
             </Form.Group>
             <Button onClick = {requestLogin} variant="primary" type="submit">
-              Enter
+              Entre
             </Button>
           </form>
         </Modal.Body>        
