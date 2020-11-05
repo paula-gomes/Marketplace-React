@@ -1,15 +1,43 @@
-import React, {useState} from 'react';
+import React, { useState, useContext } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import UserContext from '../../UserContext';
+import Alert from 'react-bootstrap/Alert'
+
 
 function ModalConfirm(props) {
+
+	const { user } = useContext(UserContext);
+	const { id } = props.value;
 	const [show, setShow] = useState(false);
 
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 
-	console.log(props);
+
+	const sale = (event) => {
+		event.preventDefault();
+
+		const body = {
+			user_id: user.id,
+			product_id: id
+		};
+
+		fetch('https://resilia-marketplace.herokuapp.com/sales/newSale', {
+			method: 'POST',
+			body: JSON.stringify(body),
+			headers: { 'Content-Type': 'application/json' },
+		})
+			.then(() => console.log('foi'))
+			
+			.catch((err) => console.log(err, 'fetch post sales'));
+
+
+
+
+	}
+
 
 	return (
 		<>
@@ -44,9 +72,9 @@ function ModalConfirm(props) {
 							<Button variant="danger" onClick={handleClose} className="mr-4">
 								Voltar
 							</Button>
-							<Button variant="success" className="mr-4">
+							<Button variant="success" className="mr-4" onClick={sale}>
 								Confirmar Compra
-							</Button>
+							</Button >
 						</div>
 					</div>
 				</Modal.Body>

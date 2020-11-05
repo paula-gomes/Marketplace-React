@@ -1,9 +1,17 @@
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button';
+import React, { useState } from 'react';
 
 
-export default function FormSupplier() {
+const Supplier = () => {
+
+	const [name, setName] = useState();
+	const [email, setEmail] = useState();
+	const [pwrd, setPwrd] = useState();
+	const [cpf, setCpf] = useState();
+	const [phone, setPhone] = useState();
+	const [address, setAddress] = useState();
 
 	return (
 		<>
@@ -42,3 +50,5 @@ export default function FormSupplier() {
 			</Form>
 		</>)
 }
+
+export default Supplier;
