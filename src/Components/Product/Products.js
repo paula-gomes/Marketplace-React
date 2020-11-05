@@ -23,15 +23,19 @@ const Products = (props) => {
 					<Card key={item.id} style={{ width: '18rem', margin: "1.5em" }}>
 						<Card.Img className="cardImg" variant="top" src={item.img} />
 						<Card.Body>
-							<Card.Title>{item.name}</Card.Title>
+							<Card.Title>{item.name}</Card.Title>							
 							<Card.Text>
-								{item.description}
-							</Card.Text>
+									<strong>Descrição:</strong> {item.description}
+								</Card.Text>
+							<Card.Text>
+									<strong>Valor da compra:</strong> R${item.price}
+								</Card.Text>
+								<Card.Text>
+									<strong>Avaliação:</strong> {item.rating}
+								</Card.Text>
 							<Link to={`/products/${item.id}`} >
-								<Button variant="primary" >Mais</Button>
-								
+								<Button variant="primary" >Mais</Button>								
 							</Link>
-
 						</Card.Body>
 					</Card>
 				))
