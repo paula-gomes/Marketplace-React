@@ -1,0 +1,16 @@
+.footer {
+    width: 100%;
+    height: 120px;
+    margin-top: 80px;
+    background-color: #f1f1f5;
+    position: relative;
+  }
+  .container {
+    align-items: center;
+  
+  }
+  a{
+    width: 385px;
+    color:black;
+    display: inline-block;
+  }

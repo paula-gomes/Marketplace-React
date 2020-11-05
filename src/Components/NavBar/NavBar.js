@@ -54,7 +54,7 @@ export default function NavBar() {
 
 				<Nav className="mr-auto" >
 					<Link to='/products'style={{ padding: "5px"}}>Products </Link>
-					<Link href="#features" style={{ padding: "5px"}}>Supplier</Link>
+					<Link to ="/newSupplier" style={{ padding: "5px"}}>Supplier</Link>
 				</Nav>				
 			</Navbar>
 		</>)
