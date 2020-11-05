@@ -3,7 +3,6 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import UserContext from '../../UserContext';
-import Alert from 'react-bootstrap/Alert'
 
 
 function ModalConfirm(props) {
@@ -29,15 +28,14 @@ function ModalConfirm(props) {
 			body: JSON.stringify(body),
 			headers: { 'Content-Type': 'application/json' },
 		})
-			.then(() => console.log('foi'))
-			
+			.then(() => {
+				console.log('foi')
+				window.alert(`Olá ${user.name}, sua compra foi efetuada`)
+				handleClose();
+			}
+		)			
 			.catch((err) => console.log(err, 'fetch post sales'));
-
-
-
-
 	}
-
 
 	return (
 		<>

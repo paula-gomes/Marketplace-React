@@ -24,7 +24,9 @@ function ModalSignIn(props) {
     Request(email).then((res)=>{
       
       login(res[0].name,res[0].id)
-      
+      console.log(res[0].name,res[0].id)
+      window.alert(`Olá ${res[0].name}, você esta logado`)
+      handleClose();
     })    
 
   }
