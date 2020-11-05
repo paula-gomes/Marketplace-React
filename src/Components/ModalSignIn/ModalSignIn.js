@@ -27,7 +27,7 @@ function ModalSignIn(props) {
           <Modal.Title>Login</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
+          <form action="https://resilia-marketplace.herokuapp.com/products" method="GET">
             <Form.Group controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control type="email" placeholder="Enter email" />
@@ -46,7 +46,7 @@ function ModalSignIn(props) {
             <Button variant="primary" type="submit">
               Enter
             </Button>
-          </Form>
+          </form>
         </Modal.Body>        
       </Modal>
     </>

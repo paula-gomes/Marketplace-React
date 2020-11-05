@@ -19,14 +19,9 @@ export default function NavBar() {
 					<img className="logo" src={Logo} alt="logo" />
 				</a>
 
-				<Nav className="mr-auto">
-					<Nav.Link href = '/products'>Products </Nav.Link>
-					<Nav.Link href="#features">Supplier</Nav.Link>
-				</Nav>
-				
 				<Form inline className="ml-auto" style={{ marginRight: "1vw" }} >
 					<FormControl type="text" placeholder="Search" className="mr-sm-2" />
-					<Button variant="outline-primary">Search</Button>
+					<Button variant="outline-primary">Pesquisar</Button>
 				</Form>
 
 				<Dropdown>
@@ -51,6 +46,12 @@ export default function NavBar() {
 						</Dropdown.Menu>
 					</div>
 				</Dropdown>
+				
+				<Nav className="mr-auto">
+					<Nav.Link href = '/products'>Products </Nav.Link>
+					<Nav.Link href="#features">Supplier</Nav.Link>
+				</Nav>
+				
 			</Navbar>
 		</>)
 }
