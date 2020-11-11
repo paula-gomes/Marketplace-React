@@ -18,7 +18,7 @@ const Home = (props) => {
 
 	console.log(products);
 	return (
-		<Carousel className="carousel">
+		<Carousel style={{ width:"400px", margin: "0 auto"}}>
 			{products.map((item, index) => {
 				if (index < 12)
 					return (
