@@ -28,7 +28,7 @@ const Home = (props) => {
 									className="d-block w-100"
 									src={item.img}
 									alt="First slide"
-									style={{height: '400px'}}
+									style={{marginTop:"25px",height: '400px'}}
 								/>
 							</Link>
 							<Carousel.Caption>

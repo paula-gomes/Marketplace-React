@@ -21,11 +21,11 @@ export default function NavBar() {
 		<>
 			<Navbar bg="light" variant="light">
 				<Link to="/">
-					<img className="logo" src={Logo} alt="logo" />
+					<img className="logo" src={Logo} alt="logo" style={{ marginRight: "100px"}} />
 				</Link>
-				<div className="search">
+				<div className="search" style={{ marginLeft: "20px"}}>
 				<Form inline >
-					<FormControl type="text" placeholder="Search" className="mr-sm-2" />
+					<FormControl type="text" placeholder="Pesquisar" className="mr-sm-2" />
 					<Button variant="outline-primary">Pesquisar</Button>
 				</Form>
 			</div>
