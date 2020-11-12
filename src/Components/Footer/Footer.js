@@ -9,27 +9,10 @@ import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
 
 const Footer = () => {
-
   return (
-    <footer className="footer">
-      <Container>
-        <Row>
-          <Col xl={10}>
-            <a href='/'>
-					    <img className="logo" src={Logo} alt="logo" />
-				    </a>
-          </Col>
-          <Col xl={1}>     
-            <a href="https://www.youtube.com/c/SpeakupTech"><FaYoutube/></a>     
-            <a href="https://www.youtube.com/c/SpeakupTech"><FaInstagram/></a>
-            <a href="https://www.youtube.com/c/SpeakupTech"><FaTwitter/></a>
-
-          </Col>
-        </Row>
-      </Container>        
-    </footer>
-  )
+    <div className="footer">
+      <p>RESILIA STORE</p>
+    </div>
+  );
 }
-
 export default Footer;
-
